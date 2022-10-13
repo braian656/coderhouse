@@ -47,6 +47,7 @@ body{
     display: block;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 
 }
 
@@ -82,13 +83,16 @@ body{
  background-color: black;
 }
 
-.main__provincias .main__info {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
+.container {
+    height: 100%;
+    width: 50%;
 }
-.main__grid figure{
-    height: 50px;
-    width: 50px;
-    background-color: green;
-    margin: 1em;
+.co1{
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+.co1 .img{
+    height: 100%;
+    width: 100%;
 }
