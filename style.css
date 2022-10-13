@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #f1faee;
+}
+
+
+.header__container{
+        background-color: #457b9d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 3;
+}
+.header__logo {
+    color: #fff;
+    padding: 1em;
+    border-radius: 2px;
+    border-radius: 7px;
+    margin-left: 0.313em;
+    font-family: 'Montserrat', sans-serif;
+}
+.header__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__items li {
+    padding: 1em;
+    margin: 0.25em;
+    background-color: #023047;
+}
+.header__items li a{
+    display: block;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.main .main__img {
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.main .main__text {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 420px;
+    width: 260px;
+    position: absolute;
+    padding: 20px;
+    left: 10%;
+    top: 20%;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.main__provincias {
+ background-color: black;
+}
+
+.main__provincias .main__info {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.main__grid figure{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    margin: 1em;
+}
