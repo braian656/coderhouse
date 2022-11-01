@@ -1,0 +1,74 @@
+$color-primary-body: #f8f9fa;
+$color-secondary: #232323;
+$color-tertiary: #ffd60a;
+$color-rgba: rgba(0, 0, 0, 0.5);
+// fuentes principales
+$primary-title: "Lato",sans-serif;
+$secondary: "Roboto",sans-serif;
+$tertiary: "Monserrat",sans-serif;
+// fuentes color
+$color-font1: #fff;
+$color-font2: #FF0072;
+$color-font3: #232323;
+$color-font4: #fffcf2;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+.header__container{
+    position: relative;
+    background-color: #232323;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    .checkbox_menu {
+        position: absolute;
+        right: 1%;
+        top: 36%;
+        transform: scale(1.5);
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    .header__logo{
+        font-size: large;
+        padding: 1rem;
+        margin-left: 0.313rem;
+        font-family: "Monserrat",sans-serif;
+        color: #fff;
+        letter-spacing: 2px;
+        a{
+            color: #fff;
+        }
+    }
+    .bars_icon {
+        img{
+            width: 2rem;
+            position: absolute;
+            right: 10%;
+            bottom: 18%;
+            display: none;
+        }
+    }
+    .header__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    }
+}

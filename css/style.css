@@ -1,0 +1,1279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+/* body{
+    height: 100vh;
+    width: 100%;
+    background-color: #f1faee;
+} */
+/* index.html */
+.header__container .checkbox_menu {
+  position: absolute;
+  right: 1%;
+  top: 36%;
+  transform: scale(1.5);
+  display: none;
+}
+
+.bars_icon img{
+    width: 2rem;
+    position: absolute;
+    right: 10%;
+    bottom: 18%;
+    display: none;
+}
+.header__container{
+    position: relative;
+    background-color: #232323;
+    position: sticky;
+    top: 0;
+    left: 0; 
+    z-index: 100;
+    width: 100%;
+}
+
+.header__container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    font-size: large;
+    padding: 1rem;
+    margin-left: 0.313rem;
+    font-family: "Monserrat",sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.header__logo a{
+    text-decoration: none;
+    color: #fff;
+}
+.header__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__items li {
+    padding: 0.625rem;
+    margin: 0.25rem;
+}
+
+.header__items li a{
+    display: block;
+    color: #FF0072;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    padding: 0 1rem;
+    position: relative;
+}
+.header__items li a::after{
+    content: "";
+    position: absolute;
+    background-color: #FF0072;
+    height: 0.188rem;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.header__items li a:hover{
+    color: #fff;
+}
+.header__items li a:hover:after{
+    width: 100%;
+}
+main {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img__section{
+    width: 100%;
+    height: 60vh;
+    padding-bottom: 1rem;
+    background-color: #f8f9fa;
+    position: relative;
+   
+}
+.img__section span{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img__section span h1{
+    min-height: 9.375rem;
+    min-width: 43.75rem;
+    background-color: #ffd60a;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
+    font-size: x-large;
+    letter-spacing: 3px;
+    color:#232323;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 3rem;
+    margin: 1rem;
+    font-family: "Roboto",sans-serif;
+}
+
+.img__section .img{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../img/1pag/fernando-tavora-jN8wERXCnkE-unsplash.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.img_1 {
+    background-image: url(../img/1pag/top-view-of-stewed-beef-meat-with-potatoes-green-pappers-and-herbs-in-clay-bowl-on-wooden-table.jpg);
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    border-radius: 7px;
+    background-size: cover;
+  
+}
+
+
+
+.img_2 {
+    background-image: url(../img/1pag/glacier-gdacef7571_1280.jpg);
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+}
+   
+
+.img_3 {
+    background-image: url(../img/1pag/preillumination-seth-cNlQpTstCK8-unsplash.jpg);
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+
+.section__img{
+    margin-top: 8rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+   
+    grid-row-gap: 0px;
+    grid-template-areas:  
+        "img_1 img_2 img_3" 
+        "img_1 img_2 img_3"
+        ;
+}
+.img_1 {
+    grid-area: img_1;
+}
+.img_2{
+    grid-area: img_2;
+  
+}
+.img_3 {
+    grid-area:img_3;
+}
+
+.section__img .img_title {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 40%;
+    font-family: "Roboto",sans-serif;
+    color: #fffcf2;
+    letter-spacing: 0.625rem;
+    font-size: x-large;
+    border-radius: 7px;
+}
+.title_div {
+  background-color: #ffd60a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_div h2{
+  font-family: "Roboto",sans-serif;
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+}
+.section__text{
+    height: 100vh;
+    max-width: 100%;
+}
+.contenedor_img {
+    width: 200px;
+    height: auto;
+}
+.section__text h2 {
+    padding-top: 3rem;
+    font-size: 2em;
+    text-align: center;
+    font-family: "Latos",sans-serif;
+    border-bottom: 3px solid #FF0072;
+
+}
+
+.section__flex {
+    display: flex;
+    padding: 2rem;
+    background-color: #080c14;
+    margin: 1rem;
+}
+
+ 
+
+.grid__img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,5, 120px);
+  grid-template-rows: repeat(4, 120px);
+  grid-gap: 10px;
+    place-content: center;
+  
+}
+.img--1{
+  background: url(/img/1pag/estadios/128-19932-dronemonumental.jpg);
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.img--2{
+  background: url(/img/1pag/estadios/526325.webp);
+  grid-area: 3 / 1 / 5 / 3;
+}
+.img--3{
+  background: url(/img/1pag/estadios/cancha-racing-avellaneda1-640x335.jpg);
+  grid-area: 2 / 3 / 4 / 5;
+}
+.img--4{
+  background: url(/img/1pag/animales/hornero.webp);
+  grid-area: 1 / 2 / 3 / 4;
+}
+
+.img--5{
+  background: url(/img/1pag/animales/liebre_patagonera.jpg);
+  grid-area: 3 / 1 / 5 / 3;
+}
+.img--6{
+  background: url(/img/1pag/animales/oso_web.jpg);
+  grid-area: 3 / 3 / 5 / 5;
+}
+.grid__img .contenedor_img {
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 300ms;
+    
+}
+
+.grid__img .contenedor_img:hover{
+    transform: scale(1.15);
+    cursor: pointer;    
+}
+   
+@media screen and (max-width:950px){
+        .section__text {
+          max-height: 500px;
+        }
+    .section__text  .grid__img{
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      .texto {
+        padding: 0;
+        
+      }
+      .section__text {
+        position: relative;
+      }
+     .section__text .section__box{
+        position: absolute;
+        width: 400px;
+      }
+     .section__box button {
+      margin: 0 auto;
+      }
+}
+.texto {
+    padding: 1rem;
+    position: relative;
+    height: 400px;
+}
+.section__box {
+    background-color: #232323;
+    grid-area: 1 / 5 / 5 / 6;
+    margin-top: 10%;
+    color: white;
+    height: 40%;
+    padding: 1rem;
+    width: 220px;
+    
+}
+.section__box button {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    margin: 0 auto;
+    padding: 13px 44px;
+    background: linear-gradient(to bottom,#ff0072 5%,);
+    background-color: #FF0072;
+    border-radius: 7px;
+    border: 1px solid #ee1eb5;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1rem;
+}
+a{
+    color:#fff;
+}
+.section__box button:hover{
+    background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+
+.section__box h3{
+    font-size: 2em;
+    font-family: "Lato",sans-serif;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.section__box p {
+    font-size: 1.25em;
+    font-family: "Roboto",sans-serif;
+    padding-top: 3rem;
+    text-align: center;
+    
+    
+}
+
+
+/* pag gastronomia */
+
+
+.navbar_secondary ul {
+  position: fixed;
+  right: 0;
+  margin: 5% 15px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.navbar_secondary .icon_img  img{
+  width: 32px;
+}
+
+.section_gastronomia {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  background-color: #FF0072;
+}
+.section_gastronomia h1{
+  font-family: "Lato",sans-serif;
+  font-size: 3.125rem;
+  color: #232323;
+}
+.section_gastronomia p{
+  padding: 1rem 0;
+  font-size: 20px;
+  font-family: "Roboto",sans-serif;
+}
+.gastronomia_img {
+  margin: 1rem auto; 
+  background-color: purple;
+  height: 300px;
+  width: 300px;
+}
+.gastronomia_img img {
+  width: 100%;
+}
+.box_comida {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.box_comida h2 {
+  font-family: "Lato",sans-serif;
+  padding: 0.3rem;
+}
+.img__comida {
+    margin: 0 auto;
+    width: 280px;
+    height: 200px;
+}
+.img__comida img{
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  }
+.section_comida {
+  padding: 0.5rem;
+  background-color: #d90424;
+  margin: 1rem;
+  width: 300px;
+}
+.section_comida p {
+  padding: 0.5rem;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+}
+.section_comida .mas {
+  font-size: 26px;
+  text-align: center;
+}
+.mas .saber_mas {
+  border-radius: 6px solid black;
+  padding: 2rem;
+}
+
+.aside {
+  height: 20%;
+  padding: 1rem;
+  background-color: #0066cc;
+}
+.aside .box_box {
+  margin: 15px 0;
+  height: 200px;
+  width: 200px;
+  background-color: #080c14;
+}
+
+/* pag patagonia */
+.main{
+    max-height: 100%;
+}
+.main .main__img { 
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/2pag/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main__img .main__text{
+    position: absolute;
+    left: 15%;
+    top: 8%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 85vh;
+    width: 18.75rem;
+    letter-spacing: 3px;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    font-family: "Roboto",sans-serif;
+}
+.main__img span{
+          -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+.grid__box h1 {
+  font-family: "Latos",sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+.grid__box .grid_redes {
+  margin-right: 4rem;
+  text-align: end;
+  text-decoration: underline
+}
+
+.grid__box span img{
+  width: 32px;
+}
+
+
+.section__provincias {
+    background-color: #edf2f4;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.section_myimg {
+  display: flex;
+  
+}
+.section_txt {
+  background-color: #fff;
+ 
+}
+
+.section_myimg .img_img {
+  margin: 1rem;
+  height: 300px;
+  width: 300px;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+
+.section_myimg .img_img:hover{
+  transform: scale(1.15);
+  cursor: pointer;    
+}
+
+.section_txt h2{
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ef027d;
+    font-family: "Lato",sans-serif;
+}
+.section_txt p{
+  font-family: "Roboto",sans-serif;
+  text-align: justify;
+  padding: 1.5rem;
+}
+ .section_txt{
+  padding: 1rem;
+  margin: auto 0;
+
+ }
+ .section_myicons {
+  display: flex;
+  justify-content: space-around;
+ }
+.section_myicons .icons_radius{
+    font-family: "Roboto",sans-serif;
+    background-color: #ef027d;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+.icons_radius:hover{
+      background-color: #0066cc;
+  }
+
+  .section__info {
+    max-width: 100%;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+
+  }
+
+  .box_info {
+    border: 1px solid #232323;
+    margin: 1rem;
+    background-color: #f1faee;
+    width: 300px;
+    height: 500px;
+    border-radius: 7px;
+  }
+  .box_info h2 {
+    text-align: center;
+    padding: 1rem;
+    font-family: "Lato",sans-serif;
+   
+  }
+  .box_info .underline {
+    margin: 1rem;
+    font-family: "Lato",sans-serif;
+  }
+  .box_info .underline:hover{
+    text-decoration: underline;
+  }
+  .box_img {
+    width: 99%;
+    height: 160px;
+    margin: 10px auto;
+    border-radius: 7px;
+  }
+  .img_lugar {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box_info p {
+    font-family: "Roboto",sans-serif;
+    height: 100px;
+    padding: 0.3rem;
+  }
+  .box_icon--info span{
+    margin: 1rem;
+    background-color: green;
+    padding: 1rem;
+  }
+  /* pag nor-argentino */
+.main .img_norte{
+  width: 100%;
+  height: 100vh;
+  background: url(/img/noroeste_argentina/norte-imagen.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* footer */
+.main__footer {
+    background-color: #232323;
+    width: 100%;
+   
+}
+
+.container_flex {
+    display: flex;
+    justify-content: space-around;
+  }
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+}
+.input_info {
+    color: #ef027d;
+    letter-spacing: 1px;
+    padding: 1rem;
+    font-family: "Lato",sans-serif;
+}
+.input_info:hover {
+    color: #0066CC;
+}
+
+input{
+    color: #fff;
+    width: 9.375rem;
+    background-color: #232323;
+    outline: none;
+    border: #fff;
+    border-bottom: 1px solid #ef027d;
+    padding: .5rem;
+}
+input:focus {
+    border-bottom:2px solid #0066CC;
+  
+}
+
+label {
+    font-family: "Roboto",sans-serif;
+    color: #fff;
+    margin: 0.75rem;
+}
+textarea {
+    resize: none;
+    height: 70px;
+    background-color: #232323;
+    outline: none;
+}
+
+.input .btn{
+margin-top: 1rem;
+font-family: "Roboto", sans-serif;
+font-weight: 0;
+font-size:  0.875rem;
+color: #fff;
+background-color: #0066CC;
+padding: 10px 30px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.btn:hover{
+
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #ee1eb5;
+border: solid 2px #ef027d;
+}
+
+.input_list {
+    text-align: center;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.input_list li{
+    margin: 1px;
+    font-family: "Roboto",sans-serif;
+}
+.input_list li a{
+    color: #fff;
+  
+}
+.input_list li a:hover{
+    color: #0066CC;
+}
+
+.input_list .list_icon {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* pag_paisajes */
+.section__buscador--img p{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.section__buscador--img {
+    background:url(../img/pag_paisajes/compass-gc8190dfe3_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+}
+.section__buscador--img .input_search {
+    width: 70%;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 1rem 0;
+    outline: none;
+    border: none;
+}
+
+.input_search::placeholder{
+  color: #03afff;
+}
+
+.section__buscador--img p span {
+    font-family: "Roboto",sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+    -webkit-animation: flicker-in-1 2s linear both;
+	 animation: flicker-in-1 2s linear both;
+    
+}
+@-webkit-keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.section__title h2{
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    padding: 2rem;
+
+}
+
+  
+ 
+.gallery__grid {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 1rem;
+    padding: 2rem;
+    grid-auto-flow: dense;
+    z-index: 33;
+}
+.gallery__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03afff;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+
+
+.gallery__item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+.item_1 {
+    background: url(../img/pag_paisajes/adriana-lorena-benavides-estrada-afyJnOzcCm4-unsplash.jpg);
+    grid-row: span 2;
+    background-position: center;
+    background-size: cover;
+}
+.item_2 {
+    background: url(../img/pag_paisajes/diogo-hungria-yjRNoycsKj4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.item_3 {
+    background: url(../img/pag_paisajes/D-faro-les-eclaireurs.jpg);
+    grid-column: span 2;
+    background-position: center;
+    background-size: cover;
+}
+.item_4{
+    background: url(../img/pag_paisajes/nestor-barbitta-QhQ4WgX77G0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-row: span 2;
+}
+.item_5{
+    background: url(../img/pag_paisajes/snowscat-H3oXiq7_bII-unsplash.jpg);
+    grid-column: span 2;
+    background-position: center;
+    background-size: cover;
+ } 
+.item_6{
+    background: url(../img/pag_paisajes/Puma-Tierra-Patagonia-1-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.item_7 {
+    background: url(../img/pag_paisajes/glaciar-gc70fe784e_1280.jpg);
+    grid-column: span 2;
+    background-position: center;
+    background-size: cover;
+}
+.item_8{
+    background: url(../img/pag_paisajes/foz-do-iguacu-gc16eec70b_640.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: span 2;
+}
+.item_9{
+    background: url(../img/pag_paisajes/lighthouse-g7f889a550_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.flecha_flex ul {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.flecha_flex a {
+  color: #232323;
+  font-weight: 700;
+  font-size: x-large;
+  display: block;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: #ef027d;
+ 
+}
+.flecha_flex .icon__arrow {
+  width: 1.875rem;
+}
+
+/*  */
+
+@media screen and (max-width: 524px){
+  .header__container .checkbox_menu {
+    position: absolute;
+    right: -2%;
+    top: 40%;
+  }
+  .section__provincias {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  
+   .texto {
+    width: 200px;
+   }
+ .section__box {
+  width: 50px;
+ }
+  
+  .header__container .checkbox_menu {
+    position: absolute;
+    right: -5%;
+    top: 40%;
+  }
+
+    .section__flex{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .section__box {
+      margin-top: 0;
+    }
+    .section__box h3 {
+      padding: 0;
+    }
+        .img__section .img{
+           max-width: 100%;
+           max-height: 100%;
+        }
+        .section__img .img_title{
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            flex-wrap: wrap;
+        }
+        /* pag paisajes */
+        .section__buscador--img p span{
+          font-size: 1.5rem;
+        }
+        .container_flex {
+          display: flex;
+          justify-content: space-between;
+        }
+        .icon__1 a img {
+          width: 2.75rem;
+        }
+        .input_list {
+          font-size: 0.875rem;
+        }
+        .input_list li a {
+          font-size: 0.813rem;
+        }
+        /*  */
+        .section__text {
+          max-width: 100%;
+          max-height: 100%;
+        }
+    }
+
+@media screen and (max-width:721px) {
+          
+              .section_myimg {
+                display: flex;
+                flex-direction: column;
+              }
+           
+            .bars_icon img{
+                display: block;                
+            }
+            .header__items {
+              display: none;
+            }
+           .section__img {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+            height: 200vh;
+      
+           }
+           .img_1,.img_2,.img_3,.img_4 {
+                margin: 0.25rem;
+           }
+           .section__img .img_title {
+            padding-top: 25%;
+           }
+         
+           .img__section .img h1{
+            min-height: 2.5rem;
+            min-width: 26.25rem;
+           }
+           .section__flex{
+            margin: 3rem;
+            display: flex;
+            flex-direction: column-reverse;
+           
+           }
+           .texto{
+           padding-top: 0px;
+           }
+        
+
+           .section__box h3 {
+            font-size: 1.25em;
+            padding-bottom: 0.625rem;
+           }
+           .section__box p {
+            padding-top: 0.625rem;
+           }
+
+           
+           .main__footer {
+            max-width: 100%;
+           }
+           /* galeria paisajes */
+           .gallery__grid .item_3{
+            grid-row:span 2;
+           }
+          }
+
+  @media screen and (max-width: 600px){
+             
+            .header__container .checkbox_menu {
+              position: absolute;
+              right: 1%;
+              top: 40%;
+            }
+            .section_myicons {
+              display: flex;
+              flex-direction: column;
+            
+            }
+            .icons_radius {
+              margin : 0.5rem;
+            }
+          }
