@@ -2,15 +2,66 @@ $color-primary-body: #f8f9fa;
 $color-secondary: #232323;
 $color-tertiary: #ffd60a;
 $color-rgba: rgba(0, 0, 0, 0.5);
+$color4: #0066cc;
+$color5: #ee1eb5;
+$color6: #d90424; 
+$color7: #ef027d;
 // fuentes principales
 $primary-title: "Lato",sans-serif;
 $secondary: "Roboto",sans-serif;
 $tertiary: "Monserrat",sans-serif;
+// mixin
+@mixin space {
+    font-family: "Lato",sans-serif;
+    padding: 0.5rem;
+}
+@mixin img {
+    width: 100%;
+    height: 100%;
+}
+@mixin shadow {
+    box-shadow: 2px -3px 5px 0px rgb(154,45,152);
+  -webkit-box-shadow: 2px -3px 5px 0px rgb(154,45,152);
+  -moz-box-shadow: 2px -3px 5px 0px rgb(154,45,152);
+    
+}
+@mixin images {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+@mixin images2 {
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    margin: 1rem;
+}
+// medidas fuentes
+$medfont1: 1em;
+$medfont2: 2em;
 // fuentes color
 $color-font1: #fff;
 $color-font2: #FF0072;
 $color-font3: #232323;
 $color-font4: #fffcf2;
+// 16px
+$med1: 1rem;
+// 150px
+$med2: 9.375rem;
+// 700px
+$med3: 43.75rem;
+// 48px
+$med9: 3rem;
+// 400px
+$med4: 25rem;
+// 8px
+$med5: 0.5rem;
+// 25px
+$med6: 1.563rem;
+// 64px
+$med7: 4rem;
+// 32px
+$med8: 2rem;
 * {
     margin: 0;
     padding: 0;
@@ -23,9 +74,10 @@ $color-font4: #fffcf2;
 }
 body {
     min-height: 100%;
-}
-
-.header__container{
+    background-color: #1b141a;
+ }
+// index-html
+.header__container {
     position: relative;
     background-color: #232323;
     position: sticky;
@@ -33,42 +85,1327 @@ body {
     left: 0;
     z-index: 100;
     width: 100%;
-    .checkbox_menu {
-        position: absolute;
-        right: 1%;
-        top: 36%;
-        transform: scale(1.5);
-        display: none;
-    }
-    nav{
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    
-    .header__logo{
-        font-size: large;
-        padding: 1rem;
-        margin-left: 0.313rem;
-        font-family: "Monserrat",sans-serif;
-        color: #fff;
-        letter-spacing: 2px;
-        a{
-            color: #fff;
+        .header__logo{
+            font-size: large;
+            padding: 1rem;
+            margin-left: 0.313rem;
+            font-family: $tertiary;
+            color: $color-font1;
+            letter-spacing: 2px;
+            a{
+                text-decoration: none;
+                color: $color-font1;
+            }
+        }
+        // bars-icon
+        .bars_icon{
+            img{
+                width: $med8;
+                position: absolute;
+                right: 8%;
+                bottom: 18%;
+                display: none;
+            }
+        }
+        .header__items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li {
+                padding: 0.625rem;
+                margin: 0.25rem;
+                a{
+                    display: block;
+                    color: $color-font2;
+                    font-family: $secondary;
+                    text-decoration: none;
+                    padding: 0 $med1;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: $color-font2;
+                        height: 0.188rem;
+                        width: 0;
+                        left: 0;
+                        bottom: -10px;
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        color: $color-font1;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
-    .bars_icon {
-        img{
-            width: 2rem;
-            position: absolute;
-            right: 10%;
-            bottom: 18%;
-            display: none;
+
+}
+
+.main {
+    max-height: 100%;
+    .img__section{
+        width: 100%;
+        height: 60vh;
+        padding-bottom: $med1;
+        position: relative;
+        .img {
+            width: 100%;
+            height: 60vh;
+            background-image: url(/img/1pag/bandera_montañas.png);
+            @include images;
+            span{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 50;
+                h1{
+                    height: $med2;
+                    width: $med3;
+                    background-color: $color-tertiary;
+                    box-shadow: 5px 5px 40px $color-rgba;
+                    font-size: x-large;
+                    letter-spacing: 3px;
+                    color: $color-font3;
+                    font-weight: bold;
+                    font-size: $medfont2;
+                    text-align: center;
+                    padding-top: $med8;
+                    margin: $med1;
+                    font-family: $secondary;
+                }
+            }
         }
     }
-    .header__items {
+
+    .section__img {
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        .img_relative {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            margin: 1.875rem auto;
+            border-radius: 82% 18% 83% 17% / 14% 84% 16% 86% ;
+           
+            .img_title {
+                position: absolute;
+                display: block;
+                height: 40%;
+                width: 100%;
+                text-align: center;
+                top: 30%;
+                font-size: 3.125rem;
+                font-family: $secondary;
+                letter-spacing: 10px;
+                &:hover {
+                    transition: 0.2s ease-in-out;
+                    color: $color-font1;
+                    background-color: rgba(219, 229, 12, 0.1);
+                }
+            }
+        }
+      .img_1{
+        background-image:url(/img/1pag/Untitled.png);
+        @include images2;
+      }
+      .img_2{
+        background-image: url(/img/1pag/glacier-gdacef7571_1280.jpg);
+        @include images2;
+      }
+     
     }
+    .mytitle {
+        background-color: $color4;
+        width: 30%;
+        margin: 13px auto;
+        font-family: $primary-title;
+        text-align: center;
+        padding: $med1;
+        border-radius: 7px;
     }
+    .section__contenedora {
+            margin: $med1 auto;
+            padding: $med1;
+            @include shadow;
+            width: 70%;
+            max-height: $med3;
+            position: relative;
+            background-color: $color-secondary;
+            .section_mycontainer{
+
+                .mycontainer_img{
+
+                    display: flex;
+                    background-color: $color-secondary;
+                    width: 100%;
+                    max-height: 15.625rem;
+
+                    .myimg{
+                        height: 14.375rem;
+                        max-height: 18.75rem;
+                        margin: 0.5rem;
+                        img{
+                            @include img;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .container1{
+                    display: flex;
+                    background-color: $color-secondary;
+                    .mycontainer_texto{
+                            width: 100%;
+                            background-color: $color-secondary;
+                            color: $color-font1;
+                            h2{
+                               @include space;
+                               color: $color5;
+                            }
+                            h3 {
+                                @include space;
+                            }
+                            p{
+                                font-family: $secondary;
+                                padding: $med5;
+                            }
+                    }
+                    .mycontainer_info{
+                        background-color: $color-secondary;
+                        display: flex;
+                        font-family: $secondary;
+                        letter-spacing: 1px;
+                        width: 100%;
+                        height: 50%;
+                        .button__info{
+                            border-radius: $med6;
+                            margin: $med1;
+                            text-align: center;
+                            display: block;
+                            background-color: $color-tertiary;
+                            width: 50%;
+                            padding: 0.4rem;
+                            transition: 0.2ms ease-in;
+                            a {
+                                color: #080c14;
+                                font-weight: 400;
+                            }
+                            &:hover {
+                                background: rgb(148,153,61);
+                                background: linear-gradient(90deg, rgba(148,153,61,1) 9%, rgba(252,255,0,1) 63%);
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .button_final{
+                    width: 30%;
+                    height: $med7;
+                    position: absolute;
+                    right: 5rem;
+                    bottom: 2.5rem;
+                    .button__masinf{
+                        font-family: $secondary;
+                        letter-spacing: 2px;
+                        display: block;
+                        background-color: #ef027d;
+                        padding: $med1;
+                        margin: 0.3rem;
+                        border-radius: 15px;
+                        text-align: center;
+                        &:hover {
+                            color: $color-font1;
+                            -webkit-transform: scale(0.8);
+                            -ms-transform: scale(0.8);
+                            transform: scale(1.1);
+                            background: rgb(154,45,152);
+                            background: linear-gradient(90deg, rgba(154,45,152,1) 9%, rgba(237,9,212,1) 63%);
+                        }
+                    }
+                }
+            }
+
+    }
+}
+
+
+
+// pag gastronomia
+.main {
+    .navbar_secondary{
+        ul{
+            position: fixed;
+            right: 0;
+            top: 10%;
+            margin: 5% 0.938rem;
+            display: flex;
+            flex-direction: column;
+            .icon_img{
+                img{
+                    width: $med8;
+                }
+            }
+        }
+    }
+
+    .section_gastronomia {
+        display: flex;
+        width: 100%;
+        padding: $med1;
+        background-color: $color-font2;
+        .gastronomia{
+            h1{
+                font-family: $primary-title;
+                font-size: 3.125rem;
+                color: $color-font3;
+            }
+            p{
+                padding: $med1 0;
+                font-size: 1.25rem;
+                font-family: $secondary;
+            }
+            .gastronomia_img{
+                margin: $med1 auto;
+                background-color: purple;
+                height: 300px;
+                width: 300px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .aside{
+            height: 20%;
+            padding: $med1;
+            background-color: $color4;
+            .box_box{
+                margin: 0.938rem;
+                height: 200px;
+                width: 200px;
+                background-color: #080c14;
+            }
+        }
+    }
+    .box_comida{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .section_comida{
+            padding: 0.5rem;
+            background-color: $color6;
+            margin: $med1;
+            width: 18.75rem;
+           
+            h2{
+                font-family: $primary-title;
+                padding: 0.3rem;
+            }
+            p{
+                padding: 0.5rem;
+                font-family: $secondary;
+                text-align: center;
+            }
+            .img__comida{
+                margin: 0 auto;
+                width: 17.5rem;
+                height: 12.5rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 7px;
+                }
+
+            }
+            .mas{
+                font-size: 1.625rem;
+                text-align: center;
+                .saber_mas {
+                    border-radius: 6px solid black;
+                    padding: $med8;
+                }
+            }
+        }
+    }
+}
+
+
+// patagonia y norarg
+.main{
+    .main__img{
+        width: 100%;
+        height: 100vh;
+        background-image: url(/img/2pag/toomas-tartes-Yizrl9N_eDA-unsplash.jpg);
+        @include images;
+        span{
+            -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+        @-webkit-keyframes text-focus-in {
+            0% {
+              -webkit-filter: blur(12px);
+                      filter: blur(12px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-filter: blur(0px);
+                      filter: blur(0px);
+              opacity: 1;
+            }
+          }
+          @keyframes text-focus-in {
+            0% {
+              -webkit-filter: blur(12px);
+                      filter: blur(12px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-filter: blur(0px);
+                      filter: blur(0px);
+              opacity: 1;
+            }
+          }
+        .main__text{
+                position: absolute;
+                left: 15%;
+                top: 8%;
+                background-color: $color-rgba;
+                height: 85vh;
+                width: 18.75rem;
+                letter-spacing: 3px;
+                color: $color-font1;
+                padding: 2rem 1rem;
+                font-size: 1.2rem;
+                font-family: $secondary;
+        }
+    }
+    .grid__box{
+            h1{
+                font-family: $primary-title;
+                text-align: center;
+                padding: $med1;
+                color: $color4;
+            }
+            .grid_redes{
+                margin-right: 4rem;
+                text-align: end;
+                color: $color-font1;
+                span{ 
+                    img{
+                        width: $med8;
+                    }
+                }
+            }
+
+            .section__provincias {
+                background-color: $color-secondary;
+                margin: $med8;
+                display: flex;
+                justify-content: space-around;
+                .section_myimg{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .tamaño{
+                        height: 18.75rem;
+                        width: 18.75rem;
+                        margin: 5px;
+                        .img_img{
+                            @include img;
+                            object-fit: cover;
+                            -webkit-box-shadow: 14px -8px 34px -6px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 14px -8px 34px -6px rgba(0,0,0,0.75);
+                            box-shadow: 14px -8px 34px -6px rgba(0,0,0,0.75);
+                            transition: all 300ms;
+                            &:hover{
+                                transform: scale(1.1);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                   
+                }
+                .section_txt{
+                    padding: $med1;
+                    margin: 0 auto;
+                    h2{
+                        color: $color-font1;
+                        font-family: $primary-title;
+                        text-align: center;
+                        padding: $med1;
+                        border-bottom: 1px solid $color5;
+                    }
+                    p{
+                        font-family: $secondary;
+                        text-align: justify;
+                        padding: 1.5rem;
+                        color: $color-font1;
+                    }
+                    .section_myicons{
+                        display: flex;
+                        justify-content: space-around;
+                        .icons_radius{
+                            font-family: $secondary;
+                            background-color: $color7;
+                            text-transform: uppercase;
+                            padding: $med1;
+                            border-radius: 7px;
+                            transition: 0.5s;
+                            font-weight: bold;
+                            &:hover{
+                                background-color: $color4;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .section__info {
+                max-width: 100%;
+                margin: $med8;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .box_info{
+                    margin: $med1;
+                    background-color: $color-secondary;
+                    width: $med4;
+                    height: 31.25rem;
+                    border-radius: 7px;
+                    h2{
+                        color: $color-font1;
+                        text-align: center;
+                        padding: $med1;
+                        font-family: $primary-title;
+                    }
+                    p{
+                        font-family: $secondary;
+                        height: 6.25rem;
+                        padding: 0.1rem;
+                        color: $color-font1;
+                    }
+                    .box_info:hover{
+                        border: 3px solid $color4;
+                    }
+                    .box_img{
+                        width: 99%;
+                        height: 10rem;
+                        margin: 10px auto;
+                        border-radius: 7px;
+                        .img_lugar{
+                           @include img;
+                            object-fit: cover;
+                            @include images;
+                        }
+                    }
+                    .underline{
+                       color: $color7;
+                       margin: $med1;
+                       font-family: $primary-title;
+                       &:hover{
+                        text-decoration: underline;
+                       }
+                    }
+                    .box_icon--info{
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: row-reverse;
+                        margin-top: 0.625rem;
+                        .masinfo{
+                            font-family: $secondary;
+                            text-align: center;
+                            background-color: $color-tertiary;
+                            width: 30%;
+                            height: 10%;
+                            border-radius: 7px;
+                            padding: 0.5rem;
+                            &:hover{
+                                transition: 0.2ms;
+                                background-color: $color4;
+                            }
+                        }
+                        .social{
+                            p{
+                                height: 60%;
+                                color: $color4;
+                            }
+                            span{
+                                margin: 0.3rem;
+                                .img_social{
+                                    width: $med8;
+                                    transition: all 300ms;
+                                    &:hover{
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+
+
+.main__footer {
+    background-color: #232323;
+    width: 100%;
+    .container_flex{
+        display: flex;
+        justify-content: space-around;
+        .input_info{
+            color: $color7;
+            padding: $med1;
+            font-family: $primary-title;
+            &:hover {
+                color: $color4;
+            }
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+            text-align: center;
+            margin: 1.25rem;
+            align-items: center;
+            .input_info{
+                color: $color7;
+                padding: $med1;
+                font-family: $primary-title;
+                
+                &:hover {
+                    color: $color4;
+                }
+            }
+            input{
+                color: $color-font1;
+                width: 9.375rem;
+                background-color: $color-secondary;
+                outline: none;
+                border: $color-font1;
+                border-bottom: 1px solid $color7;
+                padding: .5rem;
+                &:focus{
+                    border-bottom: 2px solid $color4;
+                }
+            }
+            label{
+                font-family: $secondary;
+                color: $color-font1;
+                margin: 0.75rem;
+            }
+            textarea{
+                resize: none;
+                height: 4.375rem;
+                background-color: $color-secondary;
+                outline: none;
+            }
+            .btn{
+                margin-top: $med1;
+                font-family: $secondary;
+                font-weight: 0;
+                font-size: 0.875rem;
+                color: $color-font1;
+                background-color: $color4;
+                padding: 10px 30px;
+                border: 2px solid $color4;
+                box-shadow:  rgb(0, 0, 0) 0px 0px 0px 0px;
+                border-radius: 50px;
+                transition: 1000ms;
+                transform: translateY(0);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    transition: 1000ms;
+                    padding: 10px 50px;
+                    transform: translateY(-0px);
+                    background-color: $color-font1;
+                    color: $color5;
+                    border: 2px solid $color7;
+                }
+            }
+        }
+        .input_list {
+            text-align: center;
+            padding: $med1;
+            margin-left: 2rem;
+            // .input_info{
+
+            // }
+            li{
+                margin: 1px;
+                font-family: $secondary;
+                .list_icon{
+                    display: flex;
+                    justify-content: center;
+                }
+                a{
+                    color: $color-font1;
+                    &:hover{
+                        color: $color4;
+                    }
+                }
+            }
+        }
+    }
+}
+// paisajes
+.section_buscador{
+    .section__buscador--img{
+        background-image: url(/img/pag_paisajes/brujula_search.png);
+        @include images;
+        height: $med4;
+        position: relative;
+        form{
+            p{
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                span{
+                    font-family: $secondary;
+                    font-size: $med8;
+                    font-weight: bold;
+                    color: $color-font1;
+                    letter-spacing: 3px;
+                    -webkit-animation: flicker-in-1 2s linear both;
+                    animation: flicker-in-1 2s linear both;
+                }
+                @-webkit-keyframes flicker-in-1 {
+                    0% {
+                      opacity: 0;
+                    }
+                    10% {
+                      opacity: 0;
+                    }
+                    10.1% {
+                      opacity: 1;
+                    }
+                    10.2% {
+                      opacity: 0;
+                    }
+                    20% {
+                      opacity: 0;
+                    }
+                    20.1% {
+                      opacity: 1;
+                    }
+                    20.6% {
+                      opacity: 0;
+                    }
+                    30% {
+                      opacity: 0;
+                    }
+                    30.1% {
+                      opacity: 1;
+                    }
+                    30.5% {
+                      opacity: 1;
+                    }
+                    30.6% {
+                      opacity: 0;
+                    }
+                    45% {
+                      opacity: 0;
+                    }
+                    45.1% {
+                      opacity: 1;
+                    }
+                    50% {
+                      opacity: 1;
+                    }
+                    55% {
+                      opacity: 1;
+                    }
+                    55.1% {
+                      opacity: 0;
+                    }
+                    57% {
+                      opacity: 0;
+                    }
+                    57.1% {
+                      opacity: 1;
+                    }
+                    60% {
+                      opacity: 1;
+                    }
+                    60.1% {
+                      opacity: 0;
+                    }
+                    65% {
+                      opacity: 0;
+                    }
+                    65.1% {
+                      opacity: 1;
+                    }
+                    75% {
+                      opacity: 1;
+                    }
+                    75.1% {
+                      opacity: 0;
+                    }
+                    77% {
+                      opacity: 0;
+                    }
+                    77.1% {
+                      opacity: 1;
+                    }
+                    85% {
+                      opacity: 1;
+                    }
+                    85.1% {
+                      opacity: 0;
+                    }
+                    86% {
+                      opacity: 0;
+                    }
+                    86.1% {
+                      opacity: 1;
+                    }
+                    100% {
+                      opacity: 1;
+                    }
+                  }
+                  @keyframes flicker-in-1 {
+                    0% {
+                      opacity: 0;
+                    }
+                    10% {
+                      opacity: 0;
+                    }
+                    10.1% {
+                      opacity: 1;
+                    }
+                    10.2% {
+                      opacity: 0;
+                    }
+                    20% {
+                      opacity: 0;
+                    }
+                    20.1% {
+                      opacity: 1;
+                    }
+                    20.6% {
+                      opacity: 0;
+                    }
+                    30% {
+                      opacity: 0;
+                    }
+                    30.1% {
+                      opacity: 1;
+                    }
+                    30.5% {
+                      opacity: 1;
+                    }
+                    30.6% {
+                      opacity: 0;
+                    }
+                    45% {
+                      opacity: 0;
+                    }
+                    45.1% {
+                      opacity: 1;
+                    }
+                    50% {
+                      opacity: 1;
+                    }
+                    55% {
+                      opacity: 1;
+                    }
+                    55.1% {
+                      opacity: 0;
+                    }
+                    57% {
+                      opacity: 0;
+                    }
+                    57.1% {
+                      opacity: 1;
+                    }
+                    60% {
+                      opacity: 1;
+                    }
+                    60.1% {
+                      opacity: 0;
+                    }
+                    65% {
+                      opacity: 0;
+                    }
+                    65.1% {
+                      opacity: 1;
+                    }
+                    75% {
+                      opacity: 1;
+                    }
+                    75.1% {
+                      opacity: 0;
+                    }
+                    77% {
+                      opacity: 0;
+                    }
+                    77.1% {
+                      opacity: 1;
+                    }
+                    85% {
+                      opacity: 1;
+                    }
+                    85.1% {
+                      opacity: 0;
+                    }
+                    86% {
+                      opacity: 0;
+                    }
+                    86.1% {
+                      opacity: 1;
+                    }
+                    100% {
+                      opacity: 1;
+                    }
+                  }
+                 
+                .input_search {
+                    width: 70%;
+                    height: $med9;
+                    padding: $med1;
+                    border-radius: 10px;
+                    background-color: $color-rgba;
+                    margin: $med1 0;
+                    outline: none;
+                    border: none;
+                    &::placeholder{
+                        color: $color4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main{
+    .mygallery{
+        .section__title{
+            h2{
+                font-size: $med8;
+                text-align: center;
+                font-family: $secondary;
+                font-weight: bold;
+                padding: $med8;
+                color: $color-font1;
+            }
+        }
+        .gallery__grid{
+                font-size: $med8;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: $med1;
+                padding: $med8;
+                grid-auto-flow: dense;
+                z-index: 33;
+                .gallery__item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #03afff;
+                    border-radius: 4px;
+                    transition: transform 0.3s ease-in-out;
+                    &:hover {
+                        filter: opacity(0.9);
+                        transform: scale(1.04);
+                    }
+                   
+                }
+                .item_1{
+                    background-image: url(/img/pag_paisajes/adriana-lorena-benavides-estrada-afyJnOzcCm4-unsplash.jpg);
+                    grid-row: span 2;
+                    @include images;
+                }
+                .item_2 {
+                    background-image: url(/img/pag_paisajes/diogo-hungria-yjRNoycsKj4-unsplash.jpg);
+                    @include images;
+                }
+                .item_3{ 
+                    background-image: url(/img/pag_paisajes/D-faro-les-eclaireurs.jpg);
+                    grid-column: span 2;
+                    @include images;}
+                .item_4{ 
+                    background-image: url(/img/pag_paisajes/obelisco_.png);
+                    grid-row: span 2;
+                    @include images;}
+                .item_5{ 
+                    background-image: url(/img/pag_paisajes/snowscat-H3oXiq7_bII-unsplash.jpg);
+                    grid-column: span 2;
+                    @include images;}
+                .item_6{ 
+                    background-image: url(/img/pag_paisajes/Puma-Tierra-Patagonia-1-1.jpg);
+                    @include images;}
+                .item_7{ 
+                    background-image: url(/img/pag_paisajes/glaciar-gc70fe784e_1280.jpg);
+                    grid-column: span 2;
+                    @include images;}
+                .item_8{ 
+                    background-image: url(/img/pag_paisajes/foz-do-iguacu-gc16eec70b_640.jpg);
+                    grid-column: span 2;
+                    @include images;}
+                .item_9{
+                    background-image: url(/img/pag_paisajes/lighthouse-g7f889a550_1280.jpg);
+                     @include images;}
+        }
+    }
+    .flecha{
+        .flecha_flex{
+            ul{
+                display: flex;
+                justify-content: center;
+                padding: $med1 0;
+                a{
+                    color: $color-font3;
+                    font-weight: 700;
+                    font-size: x-large;
+                    display: block;
+                    border-radius: 5px;
+                    margin: $med1;
+                    padding: $med5;
+                    background-color: $color7;
+                }
+                .icon__arrow {
+                    width: 1.875rem;
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width: 320px){
+  .main{
+    .main__img{
+        object-fit: cover;
+      .main__text{
+        height: 70%;
+        left: 0;
+        font-size: 16px;
+      }
+    }
+    .section__info{
+     
+    }
+  }
+}
+
+@media screen and (max-widht: 360px) {
+       
+        .main{
+          .section__img{
+            margin-top: 1.8rem;
+            .img_relative{
+              max-width: 20rem;
+              max-height: 12.5rem;
+            }
+          }
+          .mytitle{
+            width: 100%;
+          }
+        }
+}
+
+@media screen and (max-width: 420px){
+    .main{
+      .main__img{
+        .main__text{
+          left: 0;
+        }
+      }
+    }
+      .main{
+        .section__img{
+          .img_relative{
+            width: 90%;
+            .img_title{
+              font-size: 8px;
+              letter-spacing: 0;
+              font-weight: 100;
+            }
+          }
+        }
+        .section__contenedora{
+          max-height: 50rem;
+        }
+      }
+      .section__buscador--img{
+        p{
+          span{
+            font-size: 1.5rem
+          }
+        }
+      }
+
+      .main__footer{
+        .container_flex{
+          display: flex;
+          .input_list{
+            font-size: 0.875rem;
+            li{
+              a{
+                font-size: 0.813rem;
+              }
+            }
+          }
+        }
+      }
+}
+@media screen and(max-width: 447px){
+        .main{
+          .section_mycontainer{
+            height: 56.25rem;
+          }
+        }
+}
+@media screen and(max-width: 510px){
+      .main{
+        .img__section{
+          .img{
+            span{
+              h1{
+              
+                display: inline;
+                padding: 15px 0;
+                width: 20%;
+              }
+            }
+          }
+        }
+      }
+}
+
+@media screen and (max-width: 524px){
+  .main{
+    .grid__box{
+      .section__provincias{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 551px){
+  .main{
+    .img__section{
+     .img{
+      span{
+        margin: 0;
+        h1{
+          height: 5.375rem;
+          width: 24.75rem;
+        }
+      }
+     }
+    }
+  }
+  .main{
+    .section__img{
+      .img_title{
+        font-size: 2rem;
+      }
+    }
+    .section__contenedora{
+      height: 56.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+      .main{
+        .section_gastronomia{
+          display: flex;
+          flex-direction: column;
+        }
+        .aside{
+          display: flex;
+          flex-direction: row;
+          .box_box{
+            margin: 5px;
+          }
+        }
+      }
+      .main{
+        .section__provincias{
+          .section_myicons{
+            display: flex;
+            flex-direction: column;
+            .icons_radius{
+              margin : 0.5rem;
+            }
+          }
+        }
+      }
+}
+
+@media  screen and (max-width: 630px){
+ 
+  .main{
+    .mytitle{
+      margin-bottom: 6rem;
+      width: 50%;
+    }
+    .section__contenedora{
+      width: 100%;
+      box-shadow: none;
+      height: 800px;
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+        .header__container{
+          nav{
+            .bars_icon{
+              img{
+                display: block; 
+              }  
+            }
+            .header__items{
+              display: none;
+            }
+          }
+        }
+    .main{
+      .section__provincias{
+        .section_myimg{
+          display: flex;
+          flex-direction: column;
+          .img1, .img2 {
+            margin: 1.25rem;
+          }
+        }
+      }
+    }
+    .main{
+      .section__img{
+        .img_title{
+          padding-top: 0;
+        }
+      }
+    }
+    .main__footer{
+      max-width: 100%;
+    }
+    // paisajes
+    .main{
+      .mygallery{
+        .gallery__grid{
+          .item_3{
+            grid-row:span 2;
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 753px){
+ 
+  .main{
+    .section__img{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .img_relative{
+        .img_title{
+          font-size: 3.125rem;
+        }
+      }
+    }
+    .section__contenedora{
+      position: relative;
+      min-height: 700px;
+      padding: 0;
+      .section_mycontainer{
+        .mycontainer_texto{
+          position: absolute;
+          left: 0;
+          bottom: 14%;
+        }
+        .mycontainer_info{
+          display: flex;
+          justify-content: space-around;
+          padding: 0.3rem;
+        }
+        .button__final{
+          position: absolute;
+          bottom: 0;
+          left: 20%;
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 882px){
+  .main{
+    .img__section{
+     .img{
+      span{
+        margin: 0;
+        h1{
+          height: 7.375rem;
+          width: 29.75rem;
+        }
+      }
+     }
+    }
+  }
+  .main{
+    .section_mycontainer{
+      .mycontainer_info{
+        .button__info{
+          padding: 0.6rem 0;
+          height: 1.875rem;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1038px){
+  .main{
+    .section_mycontainer{
+      .mycontainer_info{
+        .button__info{
+          padding: 0.188rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1287px) {
+  .main{
+    .section_mycontainer{
+      .mycontainer_img{
+        .myimg{
+          img{
+            object-fit: cover;
+          }
+        }
+      }
+      .mycontainer_info{
+        .button__info{
+          margin: 0.1rem;
+        }
+      }
+    }
+  }
 }
