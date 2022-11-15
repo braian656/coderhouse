@@ -99,6 +99,10 @@ body {
             a{
                 text-decoration: none;
                 color: $color-font1;
+                &:hover{
+                  color: $color4;
+                }
+              
             }
         }
         // bars-icon
@@ -171,11 +175,10 @@ body {
                     width: $med3;
                     background-color: $color-tertiary;
                     box-shadow: 5px 5px 40px $color-rgba;
-                    font-size: x-large;
-                    letter-spacing: 3px;
+                    letter-spacing: 5px;
                     color: $color-font3;
                     font-weight: bold;
-                    font-size: $medfont2;
+                    font-size: 2.5em;
                     text-align: center;
                     padding-top: $med8;
                     margin: $med1;
@@ -184,44 +187,48 @@ body {
             }
         }
     }
-
-    .section__img {
-        display: flex;
-        justify-content: space-around;
-        .img_relative {
-            position: relative;
-            height: 400px;
-            width: 400px;
-            margin: 1.875rem auto;
-            border-radius: 82% 18% 83% 17% / 14% 84% 16% 86% ;
-           
-            .img_title {
-                position: absolute;
-                display: block;
-                height: 40%;
-                width: 100%;
-                text-align: center;
-                top: 30%;
-                font-size: 3.125rem;
-                font-family: $secondary;
-                letter-spacing: 10px;
-                &:hover {
-                    transition: 0.2s ease-in-out;
-                    color: $color-font1;
-                    background-color: rgba(219, 229, 12, 0.1);
-                }
+    .section_arg{
+      margin-top: 60px;
+      background-color: #080c14;
+      width: 100%;
+      height: 500px;
+          h2{
+            margin-left: 7rem;
+            font-family: $primary-title;
+            color: $color-font2;
+          }
+          .arg_txt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem;
+            letter-spacing: 1px;
+            padding: 0 1rem;
+            p{
+              width: 60%;
+              font-family: $secondary;
+              color: $color-font1;
             }
-        }
-      .img_1{
-        background-image:url(/img/1pag/Untitled.png);
-        @include images2;
-      }
-      .img_2{
-        background-image: url(/img/1pag/glacier-gdacef7571_1280.jpg);
-        @include images2;
-      }
-     
+            .arg_img{
+              width: 12.5rem;
+              height: 12.5rem;
+              .arg_m10{
+                @include img;
+                object-fit: cover;
+              }
+            }
+          }
+          .arg_reverse{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+           p{
+            margin: 0.5rem;
+           }
+          }
     }
+
+    
     .mytitle {
         background-color: $color4;
         width: 30%;
@@ -234,13 +241,11 @@ body {
     .section__contenedora {
             margin: $med1 auto;
             padding: $med1;
-            @include shadow;
             width: 70%;
             max-height: $med3;
             position: relative;
             background-color: $color-secondary;
             .section_mycontainer{
-
                 .mycontainer_img{
 
                     display: flex;
@@ -333,47 +338,167 @@ body {
             }
 
     }
+    .section_box{
+      width: 100%;
+      background-color: #080c14;
+
+      h2{
+        font-weight: 100;
+        padding: 1rem;
+        font-family: $primary-title;
+        color: $color-font1;
+      }
+      h3{
+        font-weight: 50;
+        padding: 1rem;
+        font-family: $primary-title;
+        color: $color-font1;
+        &:hover{
+          text-decoration: underline $color4;
+        }
+      }
+     .boximg_flex{
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      .section_boximg{
+        width: 30%;
+        padding: 1rem;
+        box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
+        .img_prl{
+          width: 250px;
+          height: 250px;
+          background-color: red;
+          position: relative;
+          span{
+            color: $color-font1;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-style: italic;
+          }
+          img{
+            @include img;
+            object-fit: cover;
+            margin: 0 auto;
+          }
+        }
+        .text_boximg{
+          color: $color-font1;
+         margin: 0.5rem;
+          padding-top: 1.5rem;
+          h4{
+            font-family: $primary-title;
+            margin: 0.5rem 0;
+            color: $color-font2;
+          }
+          p{
+            font-family: $secondary;
+            font-weight: 100;
+          }
+        }
+      }
+     }
+     .botonmas{
+      background-color: #080c14;   
+      display: flex;
+      justify-content: center;
+      p{
+        color: $color4;
+        font-family: $secondary;
+        padding: 0.5rem;
+      }
+      .mybutton2{
+        margin: 1rem;
+      width: 20%;
+      font-family: Roboto, sans-serif;
+      font-weight: 0;
+      font-size: 14px;
+      color: #232323;
+      background-color: #ee1eb5;
+      padding: 10px 30px;
+      border: solid #080c14 2px;
+      box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+      border-radius: 50px;
+      transition : 332ms;
+      transform: translateY(0);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+        a{
+          color: #080c14;
+          font-weight: bold;
+          margin: 0 auto;
+        }
+      &:hover{
+
+        transition: 332ms;
+        padding: 10px 20px;
+        transform : translateY(-0px);
+        background-color:$color-font2;
+        color: #232323;
+        border: solid 2px $color-font2;
+        }
+    }
+
+    
+
+
+
+
+
+     }
+    }
 }
 
 
 
 // pag gastronomia
 .main {
-    .navbar_secondary{
-        ul{
-            position: fixed;
-            right: 0;
-            top: 10%;
-            margin: 5% 0.938rem;
-            display: flex;
-            flex-direction: column;
-            .icon_img{
-                img{
-                    width: $med8;
-                }
-            }
+   .navbar_secondary{
+    height: 2.2rem;
+    width: 20rem;
+    ul{
+      display: flex;
+      margin: 0.625rem;
+      p{
+        font-family: $secondary;
+        color: #ef027d;
+        padding: 0.5rem;
+      }
+      li{
+       
+        .icon_img{
+          margin: 0.2rem;
+          img{
+            width: 2rem;
+          }
         }
+      }
     }
-
+   }
     .section_gastronomia {
         display: flex;
         width: 100%;
         padding: $med1;
-        background-color: $color-font2;
         .gastronomia{
             h1{
                 font-family: $primary-title;
                 font-size: 3.125rem;
-                color: $color-font3;
+                color: $color4;
+
             }
             p{
                 padding: $med1 0;
                 font-size: 1.25rem;
                 font-family: $secondary;
+                color: $color-font1;
             }
             .gastronomia_img{
                 margin: $med1 auto;
-                background-color: purple;
                 height: 300px;
                 width: 300px;
                 img{
@@ -383,15 +508,55 @@ body {
         }
         .aside{
             height: 20%;
-            padding: $med1;
-            background-color: $color4;
-            .box_box{
+            padding: 0.5rem;
+            background-color: #080c14;
+            h3{
+              text-align: center;
+              font-family: $secondary;
+              color: $color-font2;
+            }
+            .box_random{
+
+              .box_box{
                 margin: 0.938rem;
                 height: 200px;
                 width: 200px;
-                background-color: #080c14;
+                transition: .4s;
+                position: relative;
+              a{
+                img{
+                  z-index: 9;
+                  @include img;
+                  object-fit: cover;
+                  border-radius: 20px;
+                 
+                }
+              }
+              .box_box--txt{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 4rem 1rem;
+                font-family: $tertiary;
+                color: $color-font1;
+                width: 100%;
+                height: 50px;
+                background: $color-rgba;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
             }
+            }
+            
         }
+    }
+    .title__span{
+     margin: 1rem;
+      h2{
+        font-family: $primary-title;
+      color: $color4;
+    
+      }
     }
     .box_comida{
         display: flex;
@@ -399,13 +564,16 @@ body {
         flex-wrap: wrap;
         .section_comida{
             padding: 0.5rem;
-            background-color: $color6;
+            background-color: $color4;
             margin: $med1;
             width: 18.75rem;
            
             h2{
                 font-family: $primary-title;
                 padding: 0.3rem;
+                font-weight: 100;
+                color: $color-font1;
+                letter-spacing: 3px;
             }
             p{
                 padding: 0.5rem;
@@ -417,8 +585,7 @@ body {
                 width: 17.5rem;
                 height: 12.5rem;
                 img{
-                    width: 100%;
-                    height: 100%;
+                   @include img;
                     border-radius: 7px;
                 }
 
@@ -427,8 +594,11 @@ body {
                 font-size: 1.625rem;
                 text-align: center;
                 .saber_mas {
-                    border-radius: 6px solid black;
-                    padding: $med8;
+                    font-family: $secondary;
+                    color: #fff;
+                    &:hover{
+                      color: $color-font2;
+                    }
                 }
             }
         }
@@ -437,6 +607,55 @@ body {
 
 
 // patagonia y norarg
+.main{
+  .img_norte{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/noroeste_argentina/norte-imagen.webp);
+    @include images;
+    span{
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+  @-webkit-keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+      }
+    }
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+      }
+    }
+  .main__text{
+          position: absolute;
+          left: 15%;
+          top: 8%;
+          background-color: $color-rgba;
+          height: 85vh;
+          width: 18.75rem;
+          letter-spacing: 3px;
+          color: $color-font1;
+          padding: 2rem 1rem;
+          font-size: 1.2rem;
+          font-family: $secondary;
+  }
+  }
+}
 .main{
     .main__img{
         width: 100%;
@@ -567,6 +786,7 @@ body {
                 }
             }
             .section__info {
+               
                 max-width: 100%;
                 margin: $med8;
                 display: flex;
@@ -660,6 +880,7 @@ body {
     .container_flex{
         display: flex;
         justify-content: space-around;
+        align-items: center;
         .input_info{
             color: $color7;
             padding: $med1;
@@ -669,15 +890,21 @@ body {
             }
         }
         .input{
+            margin-top: 10px;
+            background-color: #080c14;
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
-            width: 15%;
+            width: 25%;
             text-align: center;
-            margin: 1.25rem;
+            margin:.25rem;
             align-items: center;
+        
+           
+          
+            }
             .input_info{
                 color: $color7;
-                padding: $med1;
                 font-family: $primary-title;
                 
                 &:hover {
@@ -685,6 +912,7 @@ body {
                 }
             }
             input{
+                margin: 1.5rem;
                 color: $color-font1;
                 width: 9.375rem;
                 background-color: $color-secondary;
@@ -742,11 +970,12 @@ body {
 
             // }
             li{
-                margin: 1px;
+                display: flex;
+                align-items: center;
                 font-family: $secondary;
                 .list_icon{
-                    display: flex;
-                    justify-content: center;
+                    margin: 2px;
+                   align-items: center;
                 }
                 a{
                     color: $color-font1;
@@ -756,8 +985,21 @@ body {
                 }
             }
         }
+        .myicon-icon{
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          .iconicon{
+            margin: 0 0.5rem;
+            img{
+           
+            }
+          
+          }
+        }
     }
-}
+   
+
 // paisajes
 .section_buscador{
     .section__buscador--img{
@@ -1088,271 +1330,62 @@ body {
         }
     }
 }
-@media screen and(max-width: 320px){
+
+
+
+
+
+
+@media screen and (max-width: 1287px) {
   .main{
-    .main__img{
-        object-fit: cover;
-      .main__text{
-        height: 70%;
-        left: 0;
-        font-size: 16px;
-      }
+    .navbar_secondary{
+      margin-top: 5rem;
+      margin-bottom: 0;
     }
-    .section__info{
-     
-    }
-  }
-}
-
-@media screen and (max-widht: 360px) {
-       
-        .main{
-          .section__img{
-            margin-top: 1.8rem;
-            .img_relative{
-              max-width: 20rem;
-              max-height: 12.5rem;
-            }
-          }
-          .mytitle{
-            width: 100%;
-          }
-        }
-}
-
-@media screen and (max-width: 420px){
-    .main{
-      .main__img{
-        .main__text{
-          left: 0;
-        }
-      }
-    }
-      .main{
-        .section__img{
-          .img_relative{
-            width: 90%;
-            .img_title{
-              font-size: 8px;
-              letter-spacing: 0;
-              font-weight: 100;
-            }
-          }
-        }
-        .section__contenedora{
-          max-height: 50rem;
-        }
-      }
-      .section__buscador--img{
-        p{
-          span{
-            font-size: 1.5rem
+    .section_mycontainer{
+      .mycontainer_img{
+        .myimg{
+          img{
+            object-fit: cover;
           }
         }
       }
-
-      .main__footer{
-        .container_flex{
-          display: flex;
-          .input_list{
-            font-size: 0.875rem;
-            li{
-              a{
-                font-size: 0.813rem;
-              }
-            }
-          }
-        }
-      }
-}
-@media screen and(max-width: 447px){
-        .main{
-          .section_mycontainer{
-            height: 56.25rem;
-          }
-        }
-}
-@media screen and(max-width: 510px){
-      .main{
-        .img__section{
-          .img{
-            span{
-              h1{
-              
-                display: inline;
-                padding: 15px 0;
-                width: 20%;
-              }
-            }
-          }
-        }
-      }
-}
-
-@media screen and (max-width: 524px){
-  .main{
-    .grid__box{
-      .section__provincias{
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 551px){
-  .main{
-    .img__section{
-     .img{
-      span{
-        margin: 0;
-        h1{
-          height: 5.375rem;
-          width: 24.75rem;
-        }
-      }
-     }
-    }
-  }
-  .main{
-    .section__img{
-      .img_title{
-        font-size: 2rem;
-      }
-    }
-    .section__contenedora{
-      height: 56.25rem;
-    }
-  }
-}
-
-@media screen and (max-width: 600px){
-      .main{
-        .section_gastronomia{
-          display: flex;
-          flex-direction: column;
-        }
-        .aside{
-          display: flex;
-          flex-direction: row;
-          .box_box{
-            margin: 5px;
-          }
-        }
-      }
-      .main{
-        .section__provincias{
-          .section_myicons{
-            display: flex;
-            flex-direction: column;
-            .icons_radius{
-              margin : 0.5rem;
-            }
-          }
-        }
-      }
-}
-
-@media  screen and (max-width: 630px){
- 
-  .main{
-    .mytitle{
-      margin-bottom: 6rem;
-      width: 50%;
-    }
-    .section__contenedora{
-      width: 100%;
-      box-shadow: none;
-      height: 800px;
-    }
-  }
-}
-
-@media screen and (max-width: 721px) {
-        .header__container{
-          nav{
-            .bars_icon{
-              img{
-                display: block; 
-              }  
-            }
-            .header__items{
-              display: none;
-            }
-          }
-        }
-    .main{
-      .section__provincias{
-        .section_myimg{
-          display: flex;
-          flex-direction: column;
-          .img1, .img2 {
-            margin: 1.25rem;
-          }
-        }
-      }
-    }
-    .main{
-      .section__img{
-        .img_title{
-          padding-top: 0;
-        }
-      }
-    }
-    .main__footer{
-      max-width: 100%;
-    }
-    // paisajes
-    .main{
-      .mygallery{
-        .gallery__grid{
-          .item_3{
-            grid-row:span 2;
-          }
-        }
-      }
-    }
-}
-
-@media screen and (max-width: 753px){
- 
-  .main{
-    .section__img{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .img_relative{
-        .img_title{
-          font-size: 3.125rem;
-        }
-      }
-    }
-    .section__contenedora{
-      position: relative;
-      min-height: 700px;
-      padding: 0;
-      .section_mycontainer{
-        .mycontainer_texto{
-          position: absolute;
-          left: 0;
-          bottom: 14%;
-        }
-        .mycontainer_info{
-          display: flex;
-          justify-content: space-around;
-          padding: 0.3rem;
-        }
-        .button__final{
-          position: absolute;
-          bottom: 0;
-          left: 20%;
-          width: 60%;
+      .mycontainer_info{
+        .button__info{
+          margin: 0.1rem;
         }
       }
     }
   }
 }
 
+@media screen and (max-width: 1038px){
+  .main{
+    .section_mycontainer{
+      .mycontainer_info{
+        .button__info{
+          padding: 0.188rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 904px) {
+  .main{
+    .section_box{
+      .section_boximg{
+        .img_prl{
+        max-width: 12.5rem;
+         max-height: 12.5rem;
+         img{
+          width: 100%;
+          height: 100%;
+         }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 882px){
   .main{
     .img__section{
@@ -1379,33 +1412,384 @@ body {
     }
   }
 }
-@media screen and (max-width: 1038px){
+
+@media screen and (max-width: 753px){
+ 
   .main{
-    .section_mycontainer{
-      .mycontainer_info{
-        .button__info{
-          padding: 0.188rem;
+   
+    .section__contenedora{
+      position: relative;
+      min-height: 700px;
+      padding: 0;
+      .section_mycontainer{
+        .mycontainer_texto{
+          position: absolute;
+          left: 0;
+          bottom: 14%;
+        }
+        .mycontainer_info{
+          display: flex;
+          justify-content: space-around;
+          padding: 0.3rem;
+        }
+        .button__final{
+          position: absolute;
+          bottom: 0;
+          left: 20%;
+          width: 60%;
+        }
+      }
+    }
+    .section_box{
+        .boximg_flex{
+          display: flex;
+          flex-direction: column;
+          .section_boximg{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            .text_boximg{
+              width: 50%;
+            }
+          }
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .header__container{
+    nav{
+      .bars_icon{
+        img{
+          display: block; 
+        }  
+      }
+      .header__items{
+        display: none;
+      }
+    }
+  }
+.main{
+.section__provincias{
+  .section_myimg{
+    display: flex;
+    flex-direction: column;
+    .img1, .img2 {
+      margin: 1.25rem;
+    }
+  }
+}
+}
+.main{
+.section__img{
+  .img_title{
+    padding-top: 0;
+  }
+}
+}
+.main__footer{
+max-width: 100%;
+}
+// paisajes
+.main{
+.mygallery{
+  .gallery__grid{
+    .item_3{
+      grid-row:span 2;
+    }
+  }
+}
+}
+        .main__footer{
+          
+          .input{
+            font-size: 15px;
+            height: 20%;
+            padding: 0;
+          }
+          .input_list{
+            font-size: 15px;
+            img{
+              width: 15px;
+            }
+          }
+        }
+}
+
+@media  screen and (max-width: 630px){
+ 
+  .main{
+    .mytitle{
+      margin-bottom: 6rem;
+      width: 50%;
+    }
+    .section__contenedora{
+      width: 100%;
+      box-shadow: none;
+      height: 800px;
+    }
+  }
+  .main__footer{
+    .container_flex{
+
+      display: flex;
+      margin: 1rem auto;
+      .input{
+        width: 50%;
+        height: 30%;
+        margin-left: 2.25rem;
+      }
+      .input_list{
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .main{
+    .section_gastronomia{
+      display: flex;
+      flex-direction: column;
+    }
+    .aside{
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      .box_random{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  .main{
+    .section__provincias{
+      .section_myicons{
+        display: flex;
+        flex-direction: column;
+        .icons_radius{
+          margin : 0.5rem;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1287px) {
+@media screen and (max-width: 551px){
   .main{
-    .section_mycontainer{
-      .mycontainer_img{
-        .myimg{
-          img{
-            object-fit: cover;
+    .img__section{
+     .img{
+      span{
+        margin: 0;
+        h1{
+          height: 5.375rem;
+          width: 24.75rem;
+          font-size: 31px;
+        }
+      }
+     }
+    }
+    .section_arg{
+      height: 600px;
+      .arg_txt{
+        .arg_img{
+            
+          .arg_m10{
+            @include img;
+          }
+        }
+       
+      }
+     
+    }
+  }
+  .main{
+    .section__img{
+      .img_title{
+        font-size: 2rem;
+      }
+    }
+    .section__contenedora{
+      height: 56.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 524px){
+  .main{
+    .grid__box{
+      .section__provincias{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 510px){
+  .main{
+    .img__section{
+      .img{
+        span{
+          h1{
+          
+            display: inline;
+            padding: 0.938rem 1.25rem;
+            width: 20%;
           }
         }
       }
-      .mycontainer_info{
-        .button__info{
-          margin: 0.1rem;
+    }
+    .mytitle{
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and(max-width: 447px){
+  .main{
+    .section_mycontainer{
+      height: 56.25rem;
+    }
+  }
+  .main__footer{
+    .container_flex{
+      display: flex;
+      flex-direction: column-reverse;
+      .input{
+        width: 100%;
+        margin: 0;
+        border-radius: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+      .main{
+        .section_arg{
+          height: 800px;
+          .arg_txt2{
+            display: flex;
+            flex-direction: column;
+            p{
+              width: 100%;
+            }
+          }
+          .arg_reverse{
+            display: flex;
+            flex-direction: row;
+          }
+        }
+        .section_box{
+          .boximg_flex{
+            .section_boximg{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              .img_prl{
+                min-width: 100%;
+                img{
+                  @include img;
+                }
+              }
+              .text_boximg{
+                width: 100%;
+              }
+            }
+          }
+          .botonmas{
+            display: flex;
+            flex-direction: column;
+            .mybutton2{
+              width: 45%;
+            }
+          }
+        }
+      }
+
+  .main{
+    .aside{
+      height: 200px;
+      h3{
+        font-weight: 100;
+        font-size: 18px;
+      }
+   .box_random{
+        display: flex;
+        flex-direction: column;   
+   }
+    }
+   .box_comida{
+    display: flex;
+    justify-content: center;
+   }
+  }
+
+
+  .main{
+    .main__img{
+      .main__text{
+        left: 0;
+      }
+    }
+  }
+    .section__buscador--img{
+      p{
+        span{
+          font-size: 1.5rem
         }
       }
     }
+
+    .main__footer{
+      .container_flex{
+        display: flex;
+        .input_list{
+          font-size: 0.875rem;
+          li{
+            a{
+              font-size: 0.813rem;
+            }
+          }
+        }
+        input{
+          width: 15.625rem;
+        }
+        textarea{
+          width: 15.625rem;
+        }
+      }
+    }
+}
+
+@media screen and (max-widht: 360px) {
+       
+  .main{
+    .section__img{
+      margin-top: 1.8rem;
+      .img_relative{
+        max-width: 20rem;
+        max-height: 12.5rem;
+      }
+    }
+    .mytitle{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width: 320px){
+  .main{
+    .main__img{
+        object-fit: cover;
+      .main__text{
+        height: 70%;
+        left: 0;
+        font-size: 16px;
+      }
+    }
+  
   }
 }
