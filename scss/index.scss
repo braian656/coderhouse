@@ -91,11 +91,12 @@ body {
         align-items: center;
         .header__logo{
             font-size: large;
-            padding: 1rem;
+            padding: $med1;
             margin-left: 0.313rem;
             font-family: $tertiary;
             color: $color-font1;
             letter-spacing: 2px;
+           
             a{
                 text-decoration: none;
                 color: $color-font1;
@@ -106,16 +107,42 @@ body {
             }
         }
         // bars-icon
-        .bars_icon{
-            img{
-                width: $med8;
-                position: absolute;
-                right: 8%;
-                bottom: 18%;
-                display: none;
+       
+        .header_menu{
+          position: relative;
+          min-height: $med9;
+
+          input[type="checkbox"] {
+            position: absolute;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            right: 0;
+            top: 0;
+            width: $med9;
+            height: $med9;
+          }
+          label{
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: inline-block;
+            z-index: 5;
+            .fa-bars{
+              font-size: $med9;
+              color: $color5;
+              display: none;
+              
             }
-        }
-        .header__items {
+          }
+          input[type="checkbox"] {
+           opacity: 0;
+            display: block;
+            z-index: 10;
+          }
+         
+          .header__items {
+           
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -148,6 +175,7 @@ body {
                 }
             }
         }
+        }
     }
 
 }
@@ -170,7 +198,8 @@ body {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 50;
-                h1{
+                h1{ 
+                    border-radius: 15px;
                     height: $med2;
                     width: $med3;
                     background-color: $color-tertiary;
@@ -203,7 +232,7 @@ body {
             align-items: center;
             margin: 0.5rem;
             letter-spacing: 1px;
-            padding: 0 1rem;
+            padding: 0 $med1;
             p{
               width: 60%;
               font-family: $secondary;
@@ -223,7 +252,7 @@ body {
             flex-direction: row-reverse;
             align-items: center;
            p{
-            margin: 0.5rem;
+            margin: $med5;
            }
           }
     }
@@ -350,7 +379,7 @@ body {
       }
       h3{
         font-weight: 50;
-        padding: 1rem;
+        padding: $med1;
         font-family: $primary-title;
         color: $color-font1;
         &:hover{
@@ -360,17 +389,16 @@ body {
      .boximg_flex{
       display: flex;
       justify-content: center;
-      padding: 1rem 0;
+      padding: $med1 0;
       .section_boximg{
         width: 30%;
-        padding: 1rem;
+        padding: $med1;
         box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -4px 5px 5px 0px rgba(0,0,0,0.75);
         .img_prl{
-          width: 250px;
-          height: 250px;
-          background-color: red;
+          width: 15.625rem;
+          height: 15.625rem;
           position: relative;
           span{
             color: $color-font1;
@@ -387,7 +415,7 @@ body {
         }
         .text_boximg{
           color: $color-font1;
-         margin: 0.5rem;
+         margin: $med5;
           padding-top: 1.5rem;
           h4{
             font-family: $primary-title;
@@ -411,14 +439,14 @@ body {
         padding: 0.5rem;
       }
       .mybutton2{
-        margin: 1rem;
+        margin: $med1;
       width: 20%;
       font-family: Roboto, sans-serif;
       font-weight: 0;
-      font-size: 14px;
+      font-size: 0.875em;
       color: #232323;
-      background-color: #ee1eb5;
-      padding: 10px 30px;
+      background-color: $color5;
+      padding: 0.625rem 1.875rem;
       border: solid #080c14 2px;
       box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
       border-radius: 50px;
@@ -436,7 +464,7 @@ body {
       &:hover{
 
         transition: 332ms;
-        padding: 10px 20px;
+        padding: 0.625rem 1.25rem;
         transform : translateY(-0px);
         background-color:$color-font2;
         color: #232323;
@@ -466,7 +494,7 @@ body {
       margin: 0.625rem;
       p{
         font-family: $secondary;
-        color: #ef027d;
+        color: $color7;
         padding: 0.5rem;
       }
       li{
@@ -499,8 +527,8 @@ body {
             }
             .gastronomia_img{
                 margin: $med1 auto;
-                height: 300px;
-                width: 300px;
+                height: 18.75rem;
+                width: 18.75rem;
                 img{
                     width: 100%;
                 }
@@ -508,7 +536,7 @@ body {
         }
         .aside{
             height: 20%;
-            padding: 0.5rem;
+            padding: $med5;
             background-color: #080c14;
             h3{
               text-align: center;
@@ -519,8 +547,8 @@ body {
 
               .box_box{
                 margin: 0.938rem;
-                height: 200px;
-                width: 200px;
+                height: 12.5rem;
+                width: 12.5rem;
                 transition: .4s;
                 position: relative;
               a{
@@ -540,7 +568,7 @@ body {
                 font-family: $tertiary;
                 color: $color-font1;
                 width: 100%;
-                height: 50px;
+                height: 3.125rem;
                 background: $color-rgba;
                 border-bottom-right-radius: 20px;
                 border-bottom-left-radius: 20px;
@@ -563,7 +591,7 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
         .section_comida{
-            padding: 0.5rem;
+            padding: $med5;
             background-color: $color4;
             margin: $med1;
             width: 18.75rem;
@@ -576,7 +604,7 @@ body {
                 letter-spacing: 3px;
             }
             p{
-                padding: 0.5rem;
+                padding: $med5;
                 font-family: $secondary;
                 text-align: center;
             }
@@ -595,7 +623,7 @@ body {
                 text-align: center;
                 .saber_mas {
                     font-family: $secondary;
-                    color: #fff;
+                    color: $color-font1;
                     &:hover{
                       color: $color-font2;
                     }
@@ -699,7 +727,7 @@ body {
                 width: 18.75rem;
                 letter-spacing: 3px;
                 color: $color-font1;
-                padding: 2rem 1rem;
+                padding: $med8 $med1;
                 font-size: 1.2rem;
                 font-family: $secondary;
         }
@@ -712,7 +740,7 @@ body {
                 color: $color4;
             }
             .grid_redes{
-                margin-right: 4rem;
+                margin-right: $med7;
                 text-align: end;
                 color: $color-font1;
                 span{ 
@@ -816,7 +844,7 @@ body {
                     .box_img{
                         width: 99%;
                         height: 10rem;
-                        margin: 10px auto;
+                        margin: 0.625rem auto;
                         border-radius: 7px;
                         .img_lugar{
                            @include img;
@@ -844,7 +872,7 @@ body {
                             width: 30%;
                             height: 10%;
                             border-radius: 7px;
-                            padding: 0.5rem;
+                            padding: $med5;
                             &:hover{
                                 transition: 0.2ms;
                                 background-color: $color4;
@@ -890,7 +918,7 @@ body {
             }
         }
         .input{
-            margin-top: 10px;
+            margin-top: 0.625rem;
             background-color: #080c14;
             border-radius: 15px;
             display: flex;
@@ -919,7 +947,7 @@ body {
                 outline: none;
                 border: $color-font1;
                 border-bottom: 1px solid $color7;
-                padding: .5rem;
+                padding: $med5;
                 &:focus{
                     border-bottom: 2px solid $color4;
                 }
@@ -942,7 +970,7 @@ body {
                 font-size: 0.875rem;
                 color: $color-font1;
                 background-color: $color4;
-                padding: 10px 30px;
+                padding: .625rem 1.875rem;
                 border: 2px solid $color4;
                 box-shadow:  rgb(0, 0, 0) 0px 0px 0px 0px;
                 border-radius: 50px;
@@ -954,7 +982,7 @@ body {
                 cursor: pointer;
                 &:hover{
                     transition: 1000ms;
-                    padding: 10px 50px;
+                    padding: .625rem 3.125rem;
                     transform: translateY(-0px);
                     background-color: $color-font1;
                     color: $color5;
@@ -965,7 +993,7 @@ body {
         .input_list {
             text-align: center;
             padding: $med1;
-            margin-left: 2rem;
+            margin-left: $med8;
             // .input_info{
 
             // }
@@ -986,7 +1014,7 @@ body {
             }
         }
         .myicon-icon{
-          height: 100px;
+          height: 6.25rem;
           display: flex;
           justify-content: center;
           .iconicon{
@@ -1419,7 +1447,7 @@ body {
    
     .section__contenedora{
       position: relative;
-      min-height: 700px;
+      min-height: 43.75rem;
       padding: 0;
       .section_mycontainer{
         .mycontainer_texto{
@@ -1459,15 +1487,34 @@ body {
 
 @media screen and (max-width: 721px) {
   .header__container{
+    .header__logo{
+     a{
+      position: absolute;
+      top: 0;
+     }
+    }
     nav{
-      .bars_icon{
-        img{
-          display: block; 
-        }  
-      }
-      .header__items{
-        display: none;
-      }
+        .header_menu{
+          height: 50%;
+          .header__items{
+            display: none;
+            height: 40%;
+           
+          }
+         
+          #menu:checked ~.header__items {
+            display: block;
+           
+          }
+       label{
+        .fa-bars{
+          display: block;
+        }
+       }
+          
+        
+        }
+      
     }
   }
 .main{
@@ -1504,14 +1551,14 @@ max-width: 100%;
         .main__footer{
           
           .input{
-            font-size: 15px;
+            font-size: 0.938em;
             height: 20%;
             padding: 0;
           }
           .input_list{
-            font-size: 15px;
+            font-size: 0.938em;
             img{
-              width: 15px;
+              width: 0.938rem;
             }
           }
         }
@@ -1527,7 +1574,7 @@ max-width: 100%;
     .section__contenedora{
       width: 100%;
       box-shadow: none;
-      height: 800px;
+      height: 50rem;
     }
   }
   .main__footer{
@@ -1554,7 +1601,6 @@ max-width: 100%;
       flex-direction: column;
     }
     .aside{
-      background-color: green;
       display: flex;
       flex-direction: column;
       .box_random{
@@ -1585,13 +1631,13 @@ max-width: 100%;
         h1{
           height: 5.375rem;
           width: 24.75rem;
-          font-size: 31px;
+          font-size: 1.938em;
         }
       }
      }
     }
     .section_arg{
-      height: 600px;
+      height: 37.5rem;
       .arg_txt{
         .arg_img{
             
@@ -1607,7 +1653,7 @@ max-width: 100%;
   .main{
     .section__img{
       .img_title{
-        font-size: 2rem;
+        font-size: 2em;
       }
     }
     .section__contenedora{
@@ -1643,10 +1689,18 @@ max-width: 100%;
     }
     .mytitle{
       margin-bottom: 2rem;
+      width: 99%;
     }
   }
 }
-
+@media screen and(max-width:481px) {
+  .main{
+    .section_arg{
+      height: 50rem;
+    }
+  }
+  
+}
 @media screen and(max-width: 447px){
   .main{
     .section_mycontainer{
@@ -1763,7 +1817,13 @@ max-width: 100%;
       }
     }
 }
-
+@media screen and (max-width:387px){
+  .main{
+    .section_arg{
+      height: 900px;
+    }
+  }
+}
 @media screen and (max-widht: 360px) {
        
   .main{
