@@ -1195,6 +1195,12 @@ body {
       border-radius: none; } }
 
 @media screen and (max-width: 420px) {
+  .main .section__info .box_info {
+    min-height: 32rem; }
+    .main .section__info .box_info .masinfo {
+      margin: 45px 0 0 0; }
+    .main .section__info .box_info .social {
+      margin: 35px 0 0 0; }
   .main .section_arg {
     height: 800px; }
     .main .section_arg .arg_txt2 {

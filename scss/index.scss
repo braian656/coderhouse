@@ -1721,6 +1721,20 @@ max-width: 100%;
 }
 
 @media screen and (max-width: 420px){
+    .main{
+      .section__info{
+       
+        .box_info{
+         min-height: 32rem;
+         .masinfo{
+            margin: 45px 0 0 0;
+         }
+         .social{
+          margin: 35px 0 0 0;
+         }
+        }
+      }
+    }
       .main{
         .section_arg{
           height: 800px;
